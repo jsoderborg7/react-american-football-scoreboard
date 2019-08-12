@@ -42,11 +42,7 @@
 }
 
 .home__name,
-.away__name,
-.down__title,
-.toGo__title,
-.ballOn__title,
-.quarter__title {
+.away__name {
   text-transform: uppercase;
   font-size: 3rem;
   padding: 2rem;
@@ -80,20 +76,9 @@
   height: 20rem;
 }
 
-.down,
-.toGo,
-.ballOn,
-.quarter {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  place-items: center;
-}
-
-.down__value,
-.toGo__value,
-.ballOn__value,
-.quarter__value {
+.player__value,
+.penalty__value,
+.shots__value {
   font-family: "Ozone";
   font-size: 5rem;
   color: var(--red);
@@ -102,7 +87,7 @@
   background-color: var(--black);
   margin-top: 1rem;
   border-radius: 4px;
-  padding: 1.6rem;
+  padding: 0 2.5rem;
   border: 1px solid white;
 }
 
@@ -126,4 +111,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.period{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.period__value{
+  font-family: "Ozone";
+  font-size: 6rem;
+  padding: 0 3rem;
+  text-align: center;
+  background-color: var(--black);
+  border: 2px solid white;
+  border-radius: 6px;
+  margin: 1rem;
 }
