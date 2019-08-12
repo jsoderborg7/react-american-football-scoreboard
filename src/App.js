@@ -45,6 +45,13 @@ function App() {
           </div>
         </div>
         <BottomRow />
+        <div className="shotsOnGoal">
+          <h3 className="shots__title">Shots on Goal</h3>
+          <div className="shots_boxes">
+            <div className="shots__value">{shotsHome}</div>
+            <div className="shots__value">{shotsAway}</div>
+          </div>
+        </div>
       </section>
       <section className="buttons">
         <div className="homeButtons">
