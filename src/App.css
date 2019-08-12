@@ -92,16 +92,21 @@
 }
 
 .buttons {
-  width: 50%;
-  margin: 0 auto;
+  width: 60%;
+  margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.homeButtons__touchdown,
-.homeButtons__fieldGoal,
-.awayButtons__touchdown,
-.awayButtons__fieldGoal,
+.homeButtons__goals,
+.homeButtons__player,
+.homeButtons__penalty,
+.awayButtons__goals,
+.awayButtons__player,
+.awayButtons__penalty,
+.homeShots,
+.awayShots,
+.periodButton,
 .resetButton {
   margin: 1rem;
   border-radius: 4px;
@@ -128,4 +133,14 @@
   border: 2px solid white;
   border-radius: 6px;
   margin: 1rem;
+}
+
+.shotsOnGoal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shots_boxes{
+display: flex;
 }

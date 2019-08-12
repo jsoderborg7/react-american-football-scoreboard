@@ -18,6 +18,8 @@ function App() {
     const [awayPlayer2, setAwayPlayer2]= useState();
     const [awayPenalty1, setAwayPenalty1]= useState();
     const [awayPenalty2, setAwayPenalty2]= useState();
+    const [shotsHome, setShotsHome]= useState(0);
+    const [shotsAway, setShotsAway]= useState(0);
 
   return (
     <div className="container">
@@ -49,29 +51,38 @@ function App() {
           {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
           <button className="homeButtons__goals" onClick={() => setHomeScore(homeScore + 1)}>Home Goals</button>
           
-          <button className="homeButtons__player" onClick={() => setHomeScore()}>Home player 1</button>
+          <button className="homeButtons__player" onClick={() => setHomePlayer1()}>Home player 1</button>
           
-          <button className="homeButtons__player" onClick={() => setHomeScore()}>Home player 2</button>
+          <button className="homeButtons__player" onClick={() => setHomePlayer2()}>Home player 2</button>
           
-          <button className="homeButtons__penalty" onClick={() => setHomeScore()}>Home penalty 1</button>
+          <button className="homeButtons__penalty" onClick={() => setHomePenalty1()}>Home penalty 1</button>
           
-          <button className="homeButtons__penalty" onClick={() => setHomeScore()}>Home penalty 2</button>
+          <button className="homeButtons__penalty" onClick={() => setHomePenalty2()}>Home penalty 2</button>
         </div>
+        
         <div className="awayButtons">
           <button className="awayButtons__goals" onClick={() => setAwayScore(awayScore + 1)}>Away Goals</button>
           
-          <button className="awayButtons__player" onClick={() => setAwayScore(awayScore + 3)}>Away player 1</button>
+          <button className="awayButtons__player" onClick={() => setAwayPlayer1()}>Away player 1</button>
 
-          <button className="awayButtons__player" onClick={() => setAwayScore(awayScore + 3)}>Away player 2</button>
+          <button className="awayButtons__player" onClick={() => setAwayPlayer2()}>Away player 2</button>
 
-          <button className="awayButtons__penalty" onClick={() => setAwayScore()}>Away penalty 1</button>
+          <button className="awayButtons__penalty" onClick={() => setAwayPenalty1()}>Away penalty 1</button>
 
-          <button className="awayButtons__penalty" onClick={() => setAwayScore()}>Away penalty 2</button>
-        
+          <button className="awayButtons__penalty" onClick={() => setAwayPenalty2()}>Away penalty 2</button>
         </div>
-        <button className="periodButton" onClick={() => setPeriod(period +1)}>Period</button>
-        <button className="resetButton" onClick={() => setHomeScore(0)}>Reset Home</button>
-        <button className="resetButton" onClick={() => setAwayScore(0)}>Reset Away</button>
+
+        <div className="otherButtons">
+          <button className="homeShots" onClick={() => setShotsHome(shotsHome + 1)}>Shots Home</button>
+
+          <button className="awayShots" onClick={() => setShotsAway(shotsAway + 1)}>Shots Away</button>
+        
+          <button className="periodButton" onClick={() => setPeriod(period +1)}>Period</button>
+        
+          <button className="resetButton" onClick={() => setHomeScore(0)}>Reset Home</button>
+        
+          <button className="resetButton" onClick={() => setAwayScore(0)}>Reset Away</button>
+        </div>
       </section>
     </div>
   );
