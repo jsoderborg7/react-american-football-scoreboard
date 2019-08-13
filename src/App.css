@@ -42,11 +42,7 @@
 }
 
 .home__name,
-.away__name,
-.down__title,
-.toGo__title,
-.ballOn__title,
-.quarter__title {
+.away__name {
   text-transform: uppercase;
   font-size: 3rem;
   padding: 2rem;
@@ -73,27 +69,25 @@
   border-radius: 6px;
 }
 
-.bottomRow {
+.bottomRow{
   display: flex;
-  justify-content: space-around;
-  place-items: center;
-  height: 20rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1.5rem;
 }
 
-.down,
-.toGo,
-.ballOn,
-.quarter {
+.bottomRowHome,
+.bottomRowAway{
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  place-items: center;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
 }
 
-.down__value,
-.toGo__value,
-.ballOn__value,
-.quarter__value {
+.player__value,
+.penalty__value,
+.shots__value {
   font-family: "Ozone";
   font-size: 5rem;
   color: var(--red);
@@ -102,21 +96,60 @@
   background-color: var(--black);
   margin-top: 1rem;
   border-radius: 4px;
-  padding: 1.6rem;
+  padding: 0 2.5rem;
   border: 1px solid white;
 }
 
 .buttons {
-  width: 50%;
-  margin: 0 auto;
+  width: 60%;
+  margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.homeButtons__touchdown,
-.homeButtons__fieldGoal,
-.awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.homeButtons__goals,
+.homeButtons__player,
+.homeButtons__penalty,
+.awayButtons__goals,
+.awayButtons__player,
+.awayButtons__penalty,
+.homeShots,
+.awayShots,
+.periodButton,
+.resetButton {
   margin: 1rem;
   border-radius: 4px;
+}
+
+.topMiddle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.period{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+.period__value{
+  font-family: "Ozone";
+  font-size: 6rem;
+  padding: 0 3rem;
+  text-align: center;
+  background-color: var(--black);
+  border: 2px solid white;
+  border-radius: 6px;
+  margin: 1rem;
+}
+
+.shotsOnGoal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shots_boxes{
+display: flex;
 }
